@@ -1,0 +1,44 @@
+{
+  "name": "redux-commands",
+  "version": "2.0.5",
+  "description": "a redux middleware that allows your dispatch commands",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm version patch && tsc",
+    "deploy": "yarn build && npm publish",
+    "test": "jest",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha test/*.js -- -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuankui/redux-commands.git"
+  },
+  "keywords": [
+    "redux",
+    "commands",
+    "middleware",
+    "redux-middleware",
+    "fsa",
+    "flux"
+  ],
+  "author": "yuankui <yuankui64@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuankui/redux-commands/issues"
+  },
+  "homepage": "https://github.com/yuankui/redux-commands#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "coveralls": "^3.0.0",
+    "istanbul": "^0.4.5",
+    "jest": "^24.9.0",
+    "sleepjs": "^3.0.1",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^3.3.0",
+    "typescript": "^3.2.1"
+  },
+  "dependencies": {
+    "redux": "^4.0.4"
+  }
+}
