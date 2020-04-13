@@ -7,7 +7,7 @@
             "esnext"
         ],
         "outDir": "./dist",
-        "rootDir": "./src",
+//        "rootDir": "./",
         "allowJs": true,
         "skipLibCheck": true,
         "esModuleInterop": true,
