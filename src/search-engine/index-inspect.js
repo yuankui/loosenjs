@@ -16,7 +16,7 @@ async function next(iter) {
 }
 
 async function scanDetail(type) {
-    const rocksdb = new RocksDB('/Users/yuankui/git/grace-editor/index.dat/' + type);
+    const rocksdb = new RocksDB('/Users/yuankui/git/loosenjs/index.dat/' + type);
 
     await new Promise(resolve => {
         rocksdb.open(async err => {

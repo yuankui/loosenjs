@@ -12,3 +12,6 @@ yarn-error.log*
 *.sln
 dist/
 package-lock.json
+
+# index.dat
+index.dat/

@@ -40,7 +40,7 @@ async function createIndex() {
     return index;
 }
 
-test('index-insert', async function() {
+test('index-insert', async function () {
     const index = await createIndex();
 
     await index.add({
@@ -83,7 +83,7 @@ test("inspect", async () => {
 });
 
 
-test('index-delete', async function() {
+test('index-delete', async function () {
     const index = await createIndex();
 
     await index.delete('yuankui');
@@ -92,17 +92,17 @@ test('index-delete', async function() {
 });
 
 
-test('search', async function() {
+test('search', async function () {
     const index = await createIndex();
 
     const docs = await index.jsonSearch({
         where: {
-           type: "field",
-           field: 'content',
-           config: {
-               type: "query",
-               text: '目前在北京'
-           }
+            type: "field",
+            field: 'content',
+            config: {
+                type: "query",
+                text: '目前在北京'
+            }
         }
     });
 
@@ -112,7 +112,7 @@ test('search', async function() {
     expect(docs.map(d => d._id)).to.be.equalTo(['661542']);
 });
 
-test('write-performance', async function() {
+test('write-performance', async function () {
     const index = await createIndex();
 
     const start = new Date().getTime();
