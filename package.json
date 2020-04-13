@@ -1,7 +1,7 @@
 {
-  "name": "redux-commands",
+  "name": "loosenjs",
   "version": "2.0.5",
-  "description": "a redux middleware that allows your dispatch commands",
+  "description": "A embeded search engine for js(node)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -12,22 +12,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yuankui/redux-commands.git"
+    "url": "git+https://github.com/yuankui/loosenjs.git"
   },
   "keywords": [
-    "redux",
-    "commands",
-    "middleware",
-    "redux-middleware",
-    "fsa",
-    "flux"
+      "search",
+      "embed",
+      "search-engine",
+      "extension"
   ],
   "author": "yuankui <yuankui64@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yuankui/redux-commands/issues"
+    "url": "https://github.com/yuankui/loosenjs/issues"
   },
-  "homepage": "https://github.com/yuankui/redux-commands#readme",
+  "homepage": "https://github.com/yuankui/loosenjs",
   "devDependencies": {
     "@types/jest": "^24.0.18",
     "coveralls": "^3.0.0",
@@ -39,6 +37,5 @@
     "typescript": "^3.2.1"
   },
   "dependencies": {
-    "redux": "^4.0.4"
   }
 }
