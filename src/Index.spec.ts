@@ -131,21 +131,32 @@ test('search-and-int-text', async function () {
 
     const docs = await index.jsonSearch({
         where: {
-            type: "and",
+            type: "or",
             left: {
-                type: "field",
-                field: 'created',
-                config: {
-                    type: "<=",
-                    value: 2
+                type: "and",
+                left: {
+                    type: "field",
+                    field: 'created',
+                    config: {
+                        type: "<=",
+                        value: 2
+                    }
+                },
+                right: {
+                    type: "field",
+                    field: 'content',
+                    config: {
+                        type: "query",
+                        text: '请问'
+                    }
                 }
             },
             right: {
                 type: "field",
-                field: 'content',
+                field: 'created',
                 config: {
-                    type: "query",
-                    text: '请问'
+                    type: "=",
+                    value: 3
                 }
             }
         }
