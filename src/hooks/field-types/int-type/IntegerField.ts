@@ -116,8 +116,9 @@ export class IntegerField implements Field {
         const nullSet = await repository.getBitset(`reverse.int.${this.name}.null`);
         const existSet = requestContext.fullIds.clone().andNot(nullSet);
 
+        const shiftedValue = config.value + Shift;
         // 3. 比较，等到[大于集，等于集，小于集]
-        const [greater, equal, lower] = this.compare(config.value, valueSets, existSet);
+        const [greater, equal, lower] = this.compare(shiftedValue, valueSets, existSet);
 
         switch (config.type) {
             case "<":
@@ -145,8 +146,8 @@ export class IntegerField implements Field {
         const uncertainSet = fullIds.clone();
 
         // 然后循环，一位一位比较
-        for (let i = 31; i >= 0; i++) {
-            const bit = numBits[i] || '0';
+        for (let i = 31; i >= 0; i--) {
+            const bit = numBits[31 - i] || '0';
             const bitset = valueSets[i];
 
             // 分3种情况
