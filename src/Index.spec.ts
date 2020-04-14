@@ -85,10 +85,6 @@ test("inspect", async () => {
 
 test('index-delete', async function () {
     const index = await createIndex();
-
-    await index.delete('yuankui');
-    // await index.delete('wangfang');
-    // await index.delete('yuansiqi');
 });
 
 
