@@ -3,6 +3,7 @@ import {newSet} from "./Bitset";
 import chai from 'chai';
 
 import assertArrays from 'chai-arrays';
+import {RoaringBitmap32} from "roaring";
 
 chai.use(assertArrays);
 chai.should();
@@ -51,3 +52,11 @@ test('andNot', async function () {
     a.toArray().should.to.be.equalTo([1, 2, 4]);
 });
 
+
+test("test", async () => {
+    const a = new RoaringBitmap32();
+    a.add(1);
+    a.add(2);
+    a.add(10);
+    a.add(101);
+})
