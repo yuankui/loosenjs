@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "npm version patch && tsc",
+    "raw-build": "tsc",
     "deploy": "yarn build && npm publish",
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha test/*.js -- -R spec"
