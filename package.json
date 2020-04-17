@@ -1,6 +1,6 @@
 {
   "name": "loosenjs",
-  "version": "2.0.33",
+  "version": "2.0.34",
   "description": "An embedded search engine for js(node)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -51,5 +51,7 @@
     "rocksdb": "^4.1.0",
     "rxjs": "^6.5.5"
   },
-  "files": ["/dist"]
+  "files": [
+    "/dist"
+  ]
 }
