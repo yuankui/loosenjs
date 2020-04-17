@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npm version patch && tsc",
+    "build": "rm -rf dist && npm version patch && tsc",
     "raw-build": "tsc",
     "deploy": "yarn build && npm publish",
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
