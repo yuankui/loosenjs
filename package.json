@@ -2,8 +2,6 @@
   "name": "loosenjs",
   "version": "2.0.34",
   "description": "An embedded search engine for js(node)",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf dist && npm version patch && tsc",
     "raw-build": "tsc",
@@ -52,6 +50,6 @@
     "rxjs": "^6.5.5"
   },
   "files": [
-    "/dist"
+    "/dist","/src"
   ]
 }
