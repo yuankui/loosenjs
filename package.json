@@ -1,6 +1,6 @@
 {
   "name": "loosenjs",
-  "version": "2.0.34",
+  "version": "2.0.35",
   "description": "An embedded search engine for js(node)",
   "scripts": {
     "build": "rm -rf dist && npm version patch && tsc",
@@ -50,6 +50,7 @@
     "rxjs": "^6.5.5"
   },
   "files": [
-    "/dist","/src"
+    "/dist",
+    "/src"
   ]
 }
